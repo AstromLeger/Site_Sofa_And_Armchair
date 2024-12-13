@@ -1,0 +1,61 @@
+﻿@using Test_Shop_2_1.Models
+@model IEnumerable<Furniture>
+
+
+@* <h2>Все товары</h2> *@
+<div class="TovarAndSpisok">
+
+    <div class="Pologenie">
+        <div class="Spisok_Tovarov">
+
+            <div class="Spisok_Sofa">
+                <h4>Диваны</h4>
+                <ul>
+                    <li><a href="#">Армада1</a></li>
+                    <li><a href="#">Аврора2</a></li>
+                    <li><a href="#">Каминное3</a></li>
+                    <li><a href="#">Бали</a></li>
+                    <li><a href="#">Бруклин</a></li>
+                    <li><a href="#">Венеция</a></li>
+                    <li><a href="#">Лофт</a></li>
+                    <li><a href="#">Грация</a></li>
+                    <li><a href="#">Валерия</a></li>
+                    <li><a href="#">Лотос</a></li>
+                    <li><a href="#">Радуга</a></li>
+                    <li><a href="#">Соренто</a></li>
+                </ul>
+            </div>
+            <div class="Spisok_Armchair">
+                <h4>Кресла</h4>
+                <ul>
+                    <li><a href="">Аврора</a></li>
+                    <li><a href="#">Каминное</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="Tovar">
+
+@{
+    foreach(var furniture in Model)
+    {
+                <div class="TovarAycheyka(@furniture.id)">
+            <h2>Модель: @furniture.name</h2>
+            <p>Цена: @furniture.price.ToString("c")</p>
+                    <button class="Button Button(@furniture.id)">Купить</button>
+        </div>
+    }
+
+}
+    </div>
+@* <h1>Все товары</h1> *@
+
+@* <div class="row mt-5 mb-2"> *@
+
+
+
+        
+</div>
+@* </div> *@
